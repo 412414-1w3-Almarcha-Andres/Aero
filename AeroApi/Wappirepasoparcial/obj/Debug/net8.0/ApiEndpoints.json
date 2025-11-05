@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "Wappirepasoparcial.Controllers.AeroController",
+    "Method": "GetAllVuelos",
+    "RelativePath": "api/Aero/Vuelos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

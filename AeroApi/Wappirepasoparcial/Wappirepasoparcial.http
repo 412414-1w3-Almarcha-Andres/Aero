@@ -1,0 +1,6 @@
+@Wappirepasoparcial_HostAddress = http://localhost:5241
+
+GET {{Wappirepasoparcial_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

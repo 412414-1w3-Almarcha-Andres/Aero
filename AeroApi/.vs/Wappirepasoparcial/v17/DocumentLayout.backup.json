@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\models\\aerolineascontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\models\\aerolineascontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\dtos\\pasajerodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\dtos\\pasajerodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\controllers\\aerocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\controllers\\aerocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\repositories\\aerorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\repositories\\aerorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\services\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\services\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\repositories\\iaerorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\repositories\\iaerorepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|c:\\users\\usuario\\desktop\\tpibd parte 3 html\\aeroapi\\wappirepasoparcial\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C206385E-A57C-46A5-9631-08F7C2FC2E57}|Wappirepasoparcial\\Wappirepasoparcial.csproj|solutionrelative:wappirepasoparcial\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AEROLINEASContext.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Models\\AEROLINEASContext.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Models\\AEROLINEASContext.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Models\\AEROLINEASContext.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Models\\AEROLINEASContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T23:34:57.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PasajeroDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Dtos\\PasajeroDto.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Dtos\\PasajeroDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Dtos\\PasajeroDto.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Dtos\\PasajeroDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T22:53:16.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAeroRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Repositories\\IAeroRepo.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Repositories\\IAeroRepo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Repositories\\IAeroRepo.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Repositories\\IAeroRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T17:27:48.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Program.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Program.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T12:53:26.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AeroController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Controllers\\AeroController.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Controllers\\AeroController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Controllers\\AeroController.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Controllers\\AeroController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T17:16:34.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AeroRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Repositories\\AeroRepo.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Repositories\\AeroRepo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Repositories\\AeroRepo.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Repositories\\AeroRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T17:17:37.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Services\\Service.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Services\\Service.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Services\\Service.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Services\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T17:17:09.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Services\\IService.cs",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\Services\\IService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\Services\\IService.cs",
+              "RelativeToolTip": "Wappirepasoparcial\\Services\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T17:17:02.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\appsettings.json",
+              "RelativeDocumentMoniker": "Wappirepasoparcial\\appsettings.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\tpibd parte 3 html\\AeroApi\\Wappirepasoparcial\\appsettings.json",
+              "RelativeToolTip": "Wappirepasoparcial\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-04T13:01:10.503Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
