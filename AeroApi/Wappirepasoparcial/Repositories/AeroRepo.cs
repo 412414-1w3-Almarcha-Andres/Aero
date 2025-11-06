@@ -16,5 +16,10 @@ namespace Wappirepasoparcial.Repositories
             var listavuelos = await _context.VUELOS.ToListAsync();
             return listavuelos;
         }
+        public async Task<List<vw_recuperar_pasajero>> GetPasajerosRecuperables()
+        {
+            return await _context.vw_recuperar_pasajero.ToListAsync();
+        }
+
     }
 }

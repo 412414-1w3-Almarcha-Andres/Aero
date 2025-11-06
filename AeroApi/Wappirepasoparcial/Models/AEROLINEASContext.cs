@@ -51,9 +51,9 @@ public partial class AEROLINEASContext : DbContext
 
     public virtual DbSet<TIPO_EQUIPAJE> TIPO_EQUIPAJE { get; set; }
 
-    public virtual DbSet<USUARIOS> USUARIOS { get; set; }
-
     public virtual DbSet<VUELOS> VUELOS { get; set; }
+
+    public virtual DbSet<vw_recuperar_pasajero> vw_recuperar_pasajero { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -82,6 +82,11 @@ public partial class AEROLINEASContext : DbContext
                 .HasForeignKey(d => d.ID_TIPO_ASIENTO)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ASIENTOS_TIPO_ASIENTOS");
+
+            entity.HasOne(d => d.ID_VUELONavigation).WithMany(p => p.ASIENTOS)
+                .HasForeignKey(d => d.ID_VUELO)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ASIENTOS_VUELOS");
         });
 
         modelBuilder.Entity<AVIONES>(entity =>
@@ -106,7 +111,7 @@ public partial class AEROLINEASContext : DbContext
         {
             entity.HasKey(e => e.ID_PASAJERO);
 
-            entity.HasIndex(e => e.NRO_DOC, "UQ__CLIENTES__EAF90E972961B5E9").IsUnique();
+            entity.HasIndex(e => e.NRO_DOC, "UQ__CLIENTES__EAF90E97482A2B02").IsUnique();
 
             entity.Property(e => e.APELLIDO)
                 .IsRequired()
@@ -161,7 +166,7 @@ public partial class AEROLINEASContext : DbContext
         {
             entity.HasKey(e => e.ID_DETALLE_FACTURA);
 
-            entity.Property(e => e.TOTAL).HasColumnType("decimal(15, 4)");
+            entity.Property(e => e.PRECIO).HasColumnType("decimal(15, 4)");
 
             entity.HasOne(d => d.ID_DETALLE_VUELONavigation).WithMany(p => p.DETALLE_FACTURA)
                 .HasForeignKey(d => d.ID_DETALLE_VUELO)
@@ -220,7 +225,6 @@ public partial class AEROLINEASContext : DbContext
             entity.HasKey(e => e.ID_FACTURA);
 
             entity.Property(e => e.FECHA).HasColumnType("datetime");
-            entity.Property(e => e.TOTAL).HasColumnType("decimal(10, 2)");
 
             entity.HasOne(d => d.ID_PAGONavigation).WithMany(p => p.FACTURAS)
                 .HasForeignKey(d => d.ID_PAGO)
@@ -352,23 +356,6 @@ public partial class AEROLINEASContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<USUARIOS>(entity =>
-        {
-            entity.HasKey(e => e.ID_USUARIO).HasName("PK_USUARIO");
-
-            entity.Property(e => e.ID_USUARIO).ValueGeneratedNever();
-            entity.Property(e => e.CONTRASEÑA)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.USUARIO)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-
-            entity.HasOne(d => d.ID_PASAJERONavigation).WithMany(p => p.USUARIOS)
-                .HasForeignKey(d => d.ID_PASAJERO)
-                .HasConstraintName("FK_CLIENTE_USUARIO");
-        });
-
         modelBuilder.Entity<VUELOS>(entity =>
         {
             entity.HasKey(e => e.ID_VUELO);
@@ -389,6 +376,31 @@ public partial class AEROLINEASContext : DbContext
                 .HasForeignKey(d => d.ID_AVION)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_VUELOS_AVIONES");
+        });
+
+        modelBuilder.Entity<vw_recuperar_pasajero>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("vw_recuperar_pasajero");
+
+            entity.Property(e => e.APELLIDO)
+                .IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.EMAIL)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.NOMBRE)
+                .IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.TELEFONO)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.mes_que_más_viaja)
+                .HasMaxLength(30)
+                .HasColumnName("mes que más viaja");
         });
 
         OnModelCreatingPartial(modelBuilder);

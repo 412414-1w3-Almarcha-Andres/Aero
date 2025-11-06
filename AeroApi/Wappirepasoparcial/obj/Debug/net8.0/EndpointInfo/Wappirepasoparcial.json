@@ -16,6 +16,18 @@
           }
         }
       }
+    },
+    "/api/Aero/recuperables": {
+      "get": {
+        "tags": [
+          "Aero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": { }

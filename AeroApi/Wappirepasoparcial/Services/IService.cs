@@ -1,4 +1,5 @@
 ﻿
+using Wappirepasoparcial.Dtos;
 using Wappirepasoparcial.Models;
 
 namespace Wappirepasoparcial.Services
@@ -7,5 +8,8 @@ namespace Wappirepasoparcial.Services
     {
         
         Task<List<VUELOS>> GetAllVuelos();
+        Task<List<vw_recuperar_pasajero>> GetPasajerosRecuperables();
+
+        // Task<VueloDto?> GetVuelosById(int id);
     }
 }

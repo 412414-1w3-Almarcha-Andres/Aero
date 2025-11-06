@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "Wappirepasoparcial.Controllers.AeroController",
+    "Method": "GetPasajerosRecuperables",
+    "RelativePath": "api/Aero/recuperables",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wappirepasoparcial.Controllers.AeroController",
     "Method": "GetAllVuelos",
     "RelativePath": "api/Aero/Vuelos",
     "HttpMethod": "GET",

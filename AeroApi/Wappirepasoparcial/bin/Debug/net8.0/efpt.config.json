@@ -92,12 +92,12 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[USUARIOS]",
+         "Name": "[dbo].[VUELOS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[VUELOS]",
-         "ObjectType": 0
+         "Name": "[dbo].[vw_recuperar_pasajero]",
+         "ObjectType": 3
       }
    ],
    "UiHint": null,

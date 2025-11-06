@@ -9,7 +9,7 @@ public partial class DETALLE_FACTURA
 {
     public int ID_DETALLE_FACTURA { get; set; }
 
-    public decimal TOTAL { get; set; }
+    public decimal PRECIO { get; set; }
 
     public int ID_FACTURA { get; set; }
 

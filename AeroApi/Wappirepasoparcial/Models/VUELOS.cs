@@ -23,6 +23,8 @@ public partial class VUELOS
 
     public int ID_AVION { get; set; }
 
+    public virtual ICollection<ASIENTOS> ASIENTOS { get; set; } = new List<ASIENTOS>();
+
     public virtual ICollection<DETALLE_VUELOS> DETALLE_VUELOS { get; set; } = new List<DETALLE_VUELOS>();
 
     public virtual AEROPUERTOS ID_AEROPUERTO_ORIGENNavigation { get; set; }

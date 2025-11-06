@@ -11,8 +11,6 @@ public partial class FACTURAS
 
     public DateTime FECHA { get; set; }
 
-    public decimal TOTAL { get; set; }
-
     public int ID_PASAJERO { get; set; }
 
     public int ID_PAGO { get; set; }

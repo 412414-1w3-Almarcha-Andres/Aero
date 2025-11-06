@@ -36,6 +36,4 @@ public partial class CLIENTES
     public virtual TIPOS_CLIENTES ID_TIPO_CLIENTENavigation { get; set; }
 
     public virtual TIPO_DOCUMENTOS ID_TIPO_DOCNavigation { get; set; }
-
-    public virtual ICollection<USUARIOS> USUARIOS { get; set; } = new List<USUARIOS>();
 }

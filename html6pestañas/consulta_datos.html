@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aerolinas-Arg</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body { padding: 1rem; }
+    .tab-pane { padding-top: 1rem; }
+    .sidebar { min-width: 250px; }
+    .table-container { overflow-x: auto; }
+  </style>
+</head>
+<body>  
+  <!-- contenedor de las 6 pestañas -->
+  <div class="container-fluid">
+    <ul class="nav nav-tabs" id="consultaTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="consulta1-tab" data-bs-toggle="tab" data-bs-target="#consulta1" type="button" role="tab">Consulta 1</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="consulta2-tab" data-bs-toggle="tab" data-bs-target="#consulta2" type="button" role="tab">Consulta 2</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="consulta3-tab" data-bs-toggle="tab" data-bs-target="#consulta3" type="button" role="tab">Consulta 3</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="consulta4-tab" data-bs-toggle="tab" data-bs-target="#consulta4" type="button" role="tab">Consulta 4</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="consulta5-tab" data-bs-toggle="tab" data-bs-target="#consulta5" type="button" role="tab">Consulta 5</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="consulta6-tab" data-bs-toggle="tab" data-bs-target="#consulta6" type="button" role="tab">Consulta 6</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="consultaTabsContent">
+      <!-- *******************Consulta 1 -->
+      <div class="tab-pane fade show active" id="consulta1" role="tabpanel">
+        <!-- CADA CONSULTA TIENE SU PROPIO FILTRO -->
+        <p> agregar consulta</p>
+      </div>
+
+      <!-- ******************Consulta 2 -->
+     <div class="tab-pane fade" id="consulta2" role="tabpanel">
+  <div class="row">
+    
+    <!-- Tabla de vuelos -->
+    <section class="col-md-9 p-4 order-md-1">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4" style="text-indent: 15em;">Nombre de la consulta 2</h2>
+        <!-- EL BOTON RECUPERARVUELOS ES FUNCIONAL,PERMITE CARGAR LA CONSULTA EN EL LOAD , PERO SE OCULTA PARA ESTETICA -->
+     <button class="btn btn-success" onclick="recuperarVuelos()" style="display: none;">Actualizar</button>
+
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped" id="tabla-vuelos">
+          <thead class="table-light">
+            <tr>
+              <th>ID Vuelo</th>
+              <th>Código</th>
+              <th>Origen</th>
+              <th>Destino</th>
+              <th>Salida</th>
+              <th>Llegada</th>
+              <th>ID Avión</th>
+              <th>Precio Base</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Filtro CONSULTA 2 -->
+    <aside class="col-md-3 p-4 bg-white order-md-2">
+      <h5 class="mb-4">Filtros</h5>
+      <div class="mb-3">
+        <!-- ACA SE AGREGAN LOS FILTROS DE ACUERDO A LA CONSULTA -->
+        <label for="filtroValor" class="form-label">Valor mínimo</label>
+        <input type="number" id="filtroValor" class="form-control" placeholder="Ej: 60000" />
+
+        <label for="filtroRrigen" class="form-label">Vuelo_origen</label>
+        <input type="number" id="filtroRrigen" class="form-control" placeholder="1 corresponde a cba" />
+      </div>
+      <button class="btn btn-primary w-100" onclick="aplicarFiltros2()">Aplicar filtros</button>
+    </aside>
+
+  </div>
+</div>
+
+
+      <!--*************************** Consulta 3 -->
+      <div class="tab-pane fade" id="consulta3" role="tabpanel">
+       <div class="row">
+    
+    <!-- Tabla de pasajeros -->
+    <section class="col-md-9 p-4 order-md-1">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4" style="text-indent: 15em;">Consulta vista vw_recuperar_pasajero</h2>
+        <!-- EL BOTON RECUPERARVUELOS ES FUNCIONAL,PERMITE CARGAR LA CONSULTA EN EL LOAD , PERO SE OCULTA PARA ESTETICA -->
+     <button class="btn btn-success" onclick="recuperarPasajeros()" style="display: none;">Actualizar</button>
+
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped" id="tabla-pasajeros">
+          <thead class="table-light">
+            <tr>
+              <th>iD_PASAJERO</th>
+              <th>mes_que_más_viaja</th>
+              <th>total_compras_mes</th>
+              <th>nombre</th>
+              <th>apellido</th>
+              <th>email</th>
+              <th>ID telefono</th>
+              
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Filtro CONSULTA 3 -->
+    <aside class="col-md-3 p-4 bg-white order-md-2">
+      <h5 class="mb-4">Filtros</h5>
+      <div class="mb-3">
+        <!-- ACA SE AGREGAN LOS FILTROS DE ACUERDO A LA CONSULTA -->
+        <label for="filtroMes" class="form-label">Mes</label>
+        <!--<input type="text" id="filtroMes" class="form-control" placeholder="Enero" />-->
+<input type="text" list="meses" name="mes" id="filtroMes" class="form-control" placeholder="Ejemplo:Enero" />
+<datalist id="meses">
+  <option value="Enero">
+  <option value="Febrero">
+  <option value="Marzo">
+  <option value="Abril">
+  <option value="Mayo">
+  <option value="Junio">
+  <option value="Julio">
+  <option value="Agosto">
+  <option value="Septiembre">
+  <option value="Octubre">
+  <option value="Noviembre">
+  <option value="Diciembre">
+</datalist>
+
+        <label for="filtrototal_compras_mes" class="form-label">Compras_Mes</label>
+        <input type="number" id="filtrototal_compras_mes" class="form-control" placeholder="Ejemplo:1" />
+      </div>
+      <button class="btn btn-primary w-100" onclick="aplicarFiltros3()">Aplicar filtros</button>
+    </aside>
+
+  </div>
+      </div>
+
+      <!-- Consulta 4 -->
+      <div class="tab-pane fade" id="consulta4" role="tabpanel">
+        <p>Agregar consulta</p>
+      </div>
+
+      <!-- Consulta 5 -->
+      <div class="tab-pane fade" id="consulta5" role="tabpanel">
+        <p>Agregar consulta</p>
+      </div>
+
+      <!-- Consulta 6 -->
+      <div class="tab-pane fade" id="consulta6" role="tabpanel">
+        <p>Agregar consulta</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="consulta.js"></script>
+</body>
+</html>

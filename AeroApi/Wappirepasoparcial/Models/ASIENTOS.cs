@@ -17,7 +17,11 @@ public partial class ASIENTOS
 
     public int ID_TIPO_ASIENTO { get; set; }
 
+    public int ID_VUELO { get; set; }
+
     public virtual ICollection<DETALLE_VUELOS> DETALLE_VUELOS { get; set; } = new List<DETALLE_VUELOS>();
 
     public virtual TIPO_ASIENTOS ID_TIPO_ASIENTONavigation { get; set; }
+
+    public virtual VUELOS ID_VUELONavigation { get; set; }
 }

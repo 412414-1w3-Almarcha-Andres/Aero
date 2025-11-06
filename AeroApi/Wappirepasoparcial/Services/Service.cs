@@ -16,5 +16,10 @@ namespace Wappirepasoparcial.Services
             var listavuelos = await _aeroRepo.GetAllVuelos();
             return listavuelos;
         }
+        public async Task<List<vw_recuperar_pasajero>> GetPasajerosRecuperables()
+        {
+            return await _aeroRepo.GetPasajerosRecuperables();
+        }
+
     }
 }

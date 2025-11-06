@@ -15,7 +15,7 @@ namespace Wappirepasoparcial.Controllers
             _service = service;
         }
 
-
+        //Lista de todos los Vuelos
         [HttpGet("Vuelos")]
         public async Task<IActionResult> GetAllVuelos()
         {
@@ -34,5 +34,37 @@ namespace Wappirepasoparcial.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = "Error interno del servidor" });
             }
         }
+
+        //Recuperar VISTA CLIENTES
+
+        [HttpGet("recuperables")]
+        public async Task<IActionResult> GetPasajerosRecuperables()
+        {
+            var pasajeros = await _service.GetPasajerosRecuperables();
+            return Ok(pasajeros);
+        }
+
+        //Recuperar Vuelo por Id
+        //[HttpGet("Vuelo/{id}")]
+        //public async Task<IActionResult> GetVuelosById(int id)
+        //{
+        //    var vuelo = await _service.GetVuelosById(id);
+        //    try
+        //    {
+        //        if (vuelo != null)
+        //        {
+        //            return Ok(vuelo);
+        //        }
+        //        return BadRequest($"No hay vuelos con el id : = {id}");
+        //    }
+        //    catch
+        //    {
+
+        //        return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = "Error interno del servidor" });
+        // }
+
+
+        // }
+
     }
 }
