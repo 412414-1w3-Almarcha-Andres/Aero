@@ -1,0 +1,82 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Wappirepasoparcial",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Aero/Vuelos": {
+      "get": {
+        "tags": [
+          "Aero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Aero/recuperables": {
+      "get": {
+        "tags": [
+          "Aero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Aero/rentables": {
+      "get": {
+        "tags": [
+          "Aero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Aero/rutasRentables": {
+      "get": {
+        "tags": [
+          "Aero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Aero/rutasImproductivas": {
+      "get": {
+        "tags": [
+          "Aero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Aero/precioDinamico": {
+      "get": {
+        "tags": [
+          "Aero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

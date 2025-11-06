@@ -160,11 +160,58 @@
         <p>Agregar consulta</p>
       </div>
 
-      <!-- Consulta 5 -->
+      <!--//****CONSULTA 5 Rutas_Rentables INICIO  */-->
       <div class="tab-pane fade" id="consulta5" role="tabpanel">
-        <p>Agregar consulta</p>
-      </div>
+        
+      <div class="row">
+    
+    <!-- Tabla de Filtro CONSULTA recuperarRutas_Rentables -->
+    <section class="col-md-9 p-4 order-md-1">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4" style="text-indent: 15em;">CONSULTA 5 Rutas_Rentables</h2>
+        <!-- EL BOTON RECUPERARVUELOS ES FUNCIONAL,PERMITE CARGAR LA CONSULTA EN EL LOAD , PERO SE OCULTA PARA ESTETICA -->
+     <button class="btn btn-success" onclick="recuperarRutas_Rentables()" style="display: none;" >Actualizar</button>
 
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped" id="tabla-Rutas_Rentables">
+          <thead class="table-light">
+            <tr>
+              <th>Origen de Ruta</th>
+              <th>Destino de Ruta</th>
+              <th>Año</th>
+               <th>Mes</th>
+                <th>Margen de Ruta</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Filtro CONSULTA recuperarRutas_Rentables -->
+    <aside class="col-md-3 p-4 bg-white order-md-2">
+      <h5 class="mb-4">Filtros</h5>
+      <div class="mb-3">
+       
+         <label for="filtroMesc5" class="form-label">Mes Inicial</label>
+        
+<input type="number"  name="mes" id="filtroMesc5" class="form-control" placeholder="Ejemplo:1" />
+
+
+        <label for="filtroMesf5" class="form-label">Mes -Final</label>
+       
+<input type="number"  name="mes" id="filtroMesf5" class="form-control" placeholder="Ejemplo:1" />
+
+      </div>
+      <button class="btn btn-primary w-100" onclick="aplicarFiltros5()">Aplicar filtros</button>
+    </aside>
+
+  </div>
+</div>
+
+      </div>
+  <!-- //****CONSULTA 5 Rutas_Rentables fin  */ -->
       <!-- Consulta 6 -->
       <div class="tab-pane fade" id="consulta6" role="tabpanel">
         <p>Agregar consulta</p>

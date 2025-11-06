@@ -58,7 +58,7 @@ function renderTabla2(datos) {
  //****CONSULTA 2 FIN  */
 
  //****CONSULTA 3 INICIO  */
-let recuperables = [];
+let pasajeros = [];
 
 function recuperarPasajeros() {
   //URL DEL SWAGGER PARA ACCEDER AL JSON 
@@ -113,6 +113,70 @@ function renderTabla3(datos) {
 
  
  //****CONSULTA 3 FIN  */
+ 
+//****CONSULTA 5 Rutas_Rentables INICIO  */
+
+let Rutas_Rentables = [];
+
+function recuperarRutas_Rentables() {
+  //URL DEL SWAGGER PARA ACCEDER AL JSON 
+  fetch('https://localhost:7246/api/Aero/rutasRentables')
+    .then(response => {
+      if (!response.ok) throw new Error("Error HTTP: " + response.status);
+      return response.json();
+    })
+    .then(data => {
+      console.log(data)//luegoquitar
+      console.table(data)
+      console.log(JSON.stringify(data[0], null, 2));
+      //GUARDAMOS LO QUE TRAEMOS DE LA URL EN UN ARREGLO pasajeros PARA TRABAJAR DE FORMA LOCAL
+      Rutas_Rentables = data;
+      renderTabla5(Rutas_Rentables);
+    })
+    .catch(error => {
+      console.error("Error al recuperar Rutas_Rentables:", error);
+    });
+}
+function aplicarFiltros5() {
+  const mes = parseInt(document.getElementById('filtroMesc5').value);
+  const mesf = parseInt(document.getElementById('filtroMesf5').value);
+
+  if (isNaN(mes) || isNaN(mesf) || mes < 1 || mes > 12 || mesf < 1 || mesf > 12 || mes > mesf) {
+    alert("Rango de meses inválido. Debe estar entre 1 y 12, y el mes inicial no puede ser mayor al final.");
+    return;
+  }
+
+  const Rutas_RentablesFiltrados = Rutas_Rentables.filter(r =>
+    r.mes >= mes && r.mes <= mesf
+  );
+
+  renderTabla5(Rutas_RentablesFiltrados);
+}
+
+function renderTabla5(datos) {
+  const tbody = document.querySelector("#tabla-Rutas_Rentables tbody");
+  tbody.innerHTML = "";
+
+  datos.forEach(v => {
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+      <td>${v.origen}</td>
+      <td>${v.destino}</td>
+      <td>${v.anio}</td>
+      <td>${v.mes}</td>
+      <td>$${v.margen_total}</td>
+      
+ 
+
+      
+    `;
+    tbody.appendChild(fila);
+  });
+}
+//****CONSULTA 5 Rutas_Rentables FIN  */
+
+
+
 
 //*****FUNCIONES PARA TODAS LAS CONSULTAS */
 
@@ -123,17 +187,8 @@ function formatearFecha(fechaISO) {
 //PARA CORRER LA CONSULTA AL CARGAR EL DOM 
 document.addEventListener("DOMContentLoaded", recuperarVuelos);//consulta2
 document.addEventListener("DOMContentLoaded", recuperarPasajeros);//consulta3
+document.addEventListener("DOMContentLoaded", recuperarRutas_Rentables);//consulta5
 
 
 
 
-
-// {
-//   "iD_PASAJERO": 31,
-//   "mes_que_más_viaja": "Enero",
-//   "total_compras_mes": 1,
-//   "nombre": "Marina",
-//   "apellido": "Paez",
-//   "email": "juan.perez@email.com",
-//   "telefono": "3511111111"
-// }
