@@ -1,56 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aerolinas-Arg</title>
+  <title>Aerolíneas-Cba</title>
+
+  <link rel="icon" type="image/png" href="avion.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body { padding: 1rem; }
-    .tab-pane { padding-top: 1rem; }
-    .sidebar { min-width: 250px; }
-    .table-container { overflow-x: auto; }
-  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+<style>
+  
+  .navbar-custom { 
+    background-color: #0d6efd; 
+  }
+
+  .navbar-custom .navbar-brand,
+  .navbar-custom .nav-link { 
+    color: #f8f9fa; 
+  }
+
+  /* separa los elementos del nav entre sí */
+  .navbar-custom .nav-link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  /* tablas */
+  .table thead { 
+    background-color: #dee2e6; 
+  }
+  .table tbody tr:nth-child(even) { 
+    background-color: #f8f9fa; 
+  }
+  .table tbody tr:nth-child(odd) { 
+    background-color: #e9ecef; 
+  }
+
+  h2.h4 { 
+    color: #0d6efd; 
+  }
+
+  /* separa las secciones de consulta del navbar */
+  .tab-content { 
+    margin-top: 2rem; 
+  }
+</style>
 </head>
-<body>  
-  <!-- contenedor de las 6 pestañas -->
-  <div class="container-fluid">
-    <ul class="nav nav-tabs" id="consultaTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="consulta1-tab" data-bs-toggle="tab" data-bs-target="#consulta1" type="button" role="tab">Consulta 1</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="consulta2-tab" data-bs-toggle="tab" data-bs-target="#consulta2" type="button" role="tab">Consulta 2</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="consulta3-tab" data-bs-toggle="tab" data-bs-target="#consulta3" type="button" role="tab">Consulta 3</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="consulta4-tab" data-bs-toggle="tab" data-bs-target="#consulta4" type="button" role="tab">Consulta 4</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="consulta5-tab" data-bs-toggle="tab" data-bs-target="#consulta5" type="button" role="tab">Consulta 5</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="consulta6-tab" data-bs-toggle="tab" data-bs-target="#consulta6" type="button" role="tab">Consulta 6</button>
-      </li>
-    </ul>
+<body>
 
-    <div class="tab-content" id="consultaTabsContent">
-      <!-- *******************Consulta 1 -->
-      <div class="tab-pane fade show active" id="consulta1" role="tabpanel">
-        <!-- CADA CONSULTA TIENE SU PROPIO FILTRO -->
-        <p> agregar consulta</p>
+  <!-- 🔷 NAVBAR SUPERIOR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="bi bi-airplane-fill"></i> Aerolíneas-Arg</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#consultas-tab" role="tab"><i class="bi bi-bar-chart-line-fill"></i>Consultas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#descripcion-tab" role="tab">Descripción</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#integrantes-tab" role="tab"><i class="bi bi-people-fill"></i>Integrantes</a>
+          </li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-      <!-- ******************Consulta 2 -->
-     <div class="tab-pane fade" id="consulta2" role="tabpanel">
-  <div class="row">
+  <!-- 🔶 CONTENIDO DE PESTAÑAS -->
+  <div class="tab-content container mt-5 pt-5">
+    <div class="tab-pane fade show active" id="consultas-tab" role="tabpanel">
+      <h3><i class="bi bi-bar-chart-line-fill"></i>Consultas</h3>
+      <!-- 🔹 INICIO CONSULTAS -->
+<div class="tab-pane fade show active" id="consultas-tab" role="tabpanel">
+  <!-- Pestañas internas -->
+  <ul class="nav nav-tabs mt-3" id="consultaTabs" role="tablist">
+    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#consulta1" type="button">Consulta 1</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#consulta2" type="button">Consulta 2</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#consulta3" type="button">Consulta 3</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#consulta4" type="button">Consulta 4</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#consulta5" type="button">Consulta 5</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#consulta6" type="button">Consulta 6</button></li>
+  </ul>
+
+  <!-- Contenido de cada consulta -->
+  <div class="tab-content mt-3" id="consultaTabsContent">
+    <div class="tab-pane fade show active" id="consulta1" role="tabpanel">
+      
+    <!-- Tabla de pasajeros -->
+<section class="col-md-9 p-4 order-md-1">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h4" style="text-indent: 15em;">Destinos Improductivos</h2>
+  </div>
+
+  <!-- Filtros -->
+  <div class="mb-3">
+    <!-- <label for="filtroNombreDestino">Filtrar por nombre de destino:</label>
+    <input type="text" id="filtroNombreDestino" oninput="aplicarFiltros3()" placeholder="Nombre destino"> -->
+  </div>
+
+  <!-- Tabla de resultados -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped" id="tabla-pasajeros">
+      <thead class="table-light">
+        <tr>
+          <th>ID Destino</th>
+          <th>Nombre Destino</th>
+          <th>Promedio Ocupación (%)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+    </div>
+    <div class="tab-pane fade" id="consulta2" role="tabpanel">
+        <div class="row">
     
     <!-- Tabla de vuelos -->
     <section class="col-md-9 p-4 order-md-1">
       <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="h4" style="text-indent: 15em;">Nombre de la consulta 2</h2>
+        <h2 class="h4" style="text-indent: 15em;">Todos los Vuelos</h2>
         <!-- EL BOTON RECUPERARVUELOS ES FUNCIONAL,PERMITE CARGAR LA CONSULTA EN EL LOAD , PERO SE OCULTA PARA ESTETICA -->
      <button class="btn btn-success" onclick="recuperarVuelos()" style="display: none;">Actualizar</button>
 
@@ -89,37 +165,34 @@
     </aside>
 
   </div>
-</div>
-
-
-      <!--*************************** Consulta 3 -->
-      <div class="tab-pane fade" id="consulta3" role="tabpanel">
-       <div class="row">
+    </div>
+    <div class="tab-pane fade" id="consulta3" role="tabpanel">
+      <div class="row">
     
     <!-- Tabla de pasajeros -->
     <section class="col-md-9 p-4 order-md-1">
       <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="h4" style="text-indent: 15em;">Consulta vista vw_recuperar_pasajero</h2>
+        <h2 class="h4" style="text-indent: 15em;">Pasajeros Recuperables</h2>
         <!-- EL BOTON RECUPERARVUELOS ES FUNCIONAL,PERMITE CARGAR LA CONSULTA EN EL LOAD , PERO SE OCULTA PARA ESTETICA -->
      <button class="btn btn-success" onclick="recuperarPasajeros()" style="display: none;">Actualizar</button>
 
       </div>
       <div class="table-responsive">
-        <table class="table table-bordered table-striped" id="tabla-pasajeros">
-          <thead class="table-light">
-            <tr>
-              <th>iD_PASAJERO</th>
-              <th>mes_que_más_viaja</th>
-              <th>total_compras_mes</th>
-              <th>nombre</th>
-              <th>apellido</th>
-              <th>email</th>
-              <th>ID telefono</th>
-              
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+        <table class="table table-bordered table-striped" id="tabla-pasajeross">
+    <thead class="table-light">
+      <tr>
+        <th>ID Pasajero</th>
+        <th>Mes que más viaja</th>
+        <th>Total compras mes</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
       </div>
     </section>
 
@@ -153,73 +226,203 @@
     </aside>
 
   </div>
-      </div>
-
-      <!-- Consulta 4 -->
-      <div class="tab-pane fade" id="consulta4" role="tabpanel">
-        <p>Agregar consulta</p>
-      </div>
-
-      <!--//****CONSULTA 5 Rutas_Rentables INICIO  */-->
-      <div class="tab-pane fade" id="consulta5" role="tabpanel">
-        
-      <div class="row">
-    
-    <!-- Tabla de Filtro CONSULTA recuperarRutas_Rentables -->
-    <section class="col-md-9 p-4 order-md-1">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="h4" style="text-indent: 15em;">CONSULTA 5 Rutas_Rentables</h2>
-        <!-- EL BOTON RECUPERARVUELOS ES FUNCIONAL,PERMITE CARGAR LA CONSULTA EN EL LOAD , PERO SE OCULTA PARA ESTETICA -->
-     <button class="btn btn-success" onclick="recuperarRutas_Rentables()" style="display: none;" >Actualizar</button>
-
-      </div>
-      <div class="table-responsive">
-        <table class="table table-bordered table-striped" id="tabla-Rutas_Rentables">
-          <thead class="table-light">
-            <tr>
-              <th>Origen de Ruta</th>
-              <th>Destino de Ruta</th>
-              <th>Año</th>
-               <th>Mes</th>
-                <th>Margen de Ruta</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Filtro CONSULTA recuperarRutas_Rentables -->
-    <aside class="col-md-3 p-4 bg-white order-md-2">
-      <h5 class="mb-4">Filtros</h5>
-      <div class="mb-3">
-       
-         <label for="filtroMesc5" class="form-label">Mes Inicial</label>
-        
-<input type="number"  name="mes" id="filtroMesc5" class="form-control" placeholder="Ejemplo:1" />
-
-
-        <label for="filtroMesf5" class="form-label">Mes -Final</label>
-       
-<input type="number"  name="mes" id="filtroMesf5" class="form-control" placeholder="Ejemplo:1" />
-
-      </div>
-      <button class="btn btn-primary w-100" onclick="aplicarFiltros5()">Aplicar filtros</button>
-    </aside>
-
+    </div>
+    <div class="tab-pane fade" id="consulta4" role="tabpanel">
+      <section class="col-md-9 p-4 order-md-1">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h4" style="text-indent: 15em;">Pasajeros Rentables</h2>
+    <!-- Botón oculto para actualizar -->
+    <button class="btn btn-success" onclick="recuperarPasajerosRentables()" style="display: none;">Actualizar</button>
   </div>
-</div>
 
-      </div>
-  <!-- //****CONSULTA 5 Rutas_Rentables fin  */ -->
-      <!-- Consulta 6 -->
-      <div class="tab-pane fade" id="consulta6" role="tabpanel">
-        <p>Agregar consulta</p>
-      </div>
+  <div class="mb-3">
+    <input type="text" id="filtroNombrePasajeroRentable" placeholder="Filtrar por nombre" class="form-control">
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped" id="tabla-pasajeros-rentables">
+      <thead class="table-light">
+        <tr>
+          <th>ID Pasajero</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Gasto Promedio</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+    </div>
+    <div class="tab-pane fade" id="consulta5" role="tabpanel">
+       <section class="col-md-9 p-4 order-md-1">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h4" style="text-indent: 15em;">Rutas Rentables</h2>
+    <!-- Botón oculto para actualizar -->
+    <button class="btn btn-success" onclick="recuperarRutasRentables()" style="display: none;">Actualizar</button>
+  </div>
+
+  <!-- Filtros -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input type="text" id="filtroOrigen" placeholder="Filtrar por origen" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <input type="text" id="filtroDestino" placeholder="Filtrar por destino" class="form-control">
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped" id="tabla-rutas-rentables">
+      <thead class="table-light">
+        <tr>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Año</th>
+          <th>Mes</th>
+          <th>Margen Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+    </div>
+    <div class="tab-pane fade" id="consulta6" role="tabpanel">
+     <section class="col-md-9 p-4 order-md-1">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="h4" style="text-indent: 15em;">Vuelos Precio Dinámico</h2>
+    <!-- Botón oculto para actualizar -->
+    <button class="btn btn-success" onclick="recuperarPrecioDinamico()" style="display: none;">Actualizar</button>
+  </div>
+
+  <!-- Filtros -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input type="number" id="filtroIdVuelo" placeholder="Filtrar por ID de vuelo" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <input type="number" step="0.01" id="filtroPorcentaje" placeholder="Filtrar por ocupación mínima %" class="form-control">
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped" id="tabla-precio-dinamico">
+      <thead class="table-light">
+        <tr>
+          <th>ID Vuelo</th>
+          <th>% Ocupación</th>
+          <th>Precio Base</th>
+          <th>Incremento</th>
+          <th>Precio Final</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+    </div>
+  </div>
+</div>
+<!-- 🔹 FIN CONSULTAS -->
+    </div>
+    <div class="tab-pane fade" id="descripcion-tab" role="tabpanel">
+      <h3>Descripción</h3>
+  desccripcion
+    </div>
+    <div class="tab-pane fade" id="integrantes-tab" role="tabpanel">
+      <h3><i class="bi bi-people-fill"></i>Integrantes</h3>
+      
+<section class="py-5" style="background-color:#1355ce;">
+  <div class="container text-center" 
+       style="border: 12px solid #1355ce; 
+              border-image: url('https://www.transparenttextures.com/patterns/marble.png') 30 round; 
+              padding: 20px; 
+              background-color: #aeadba;">
+    
+    <h2 class="text-primary fw-bold mb-1">OUR TEAM MEMBERS</h2>
+    <p class="text-secondary mb-5">MEET OUR TEAM!</p>
+    
+    <div class="row justify-content-center">
+
+      <!-- Integrante 1 -->
+      <div class="col-md-5 mb-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center" style="background-color:#E3F2FD;">
+            <img src="https://uvs.frc.utn.edu.ar/pluginfile.php/56194/user/icon/adaptable/f1?rev=762670" 
+                 class="rounded-circle mb-3" width="120" height="120" style="object-fit:cover;" alt="Foto 1">
+            <h5 class="text-primary fw-bold">Laura Gómez</h5>
+            <p class="text-muted mb-1">Marketing Lead</p>
+            <p class="fst-italic text-secondary">"Creatividad con propósito."</p>
+            <div class="mb-2 text-warning">★★★★★</div>
+            <p class="mb-1"><a href="mailto:laura@example.com" class="text-info text-decoration-none">laura@example.com</a></p>
+            <p><a href="https://linkedin.com/in/lauragomez" class="text-secondary text-decoration-none">LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integrante 2 -->
+      <div class="col-md-5 mb-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center" style="background-color:#E3F2FD;">
+            <img src="https://www.greengeeks.com/tutorials/wp-content/uploads/2020/10/Team-Member-Profile.jpg" 
+                 class="rounded-circle mb-3" width="120" height="120" style="object-fit:cover;" alt="Foto 2">
+            <h5 class="text-primary fw-bold">Carlos Méndez</h5>
+            <p class="text-muted mb-1">Full Stack Developer</p>
+            <p class="fst-italic text-secondary">"Código limpio, soluciones claras."</p>
+            <div class="mb-2 text-warning">★★★★★</div>
+            <p class="mb-1"><a href="mailto:carlos@example.com" class="text-info text-decoration-none">carlos@example.com</a></p>
+            <p><a href="https://linkedin.com/in/carlosmendez" class="text-secondary text-decoration-none">LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+         <!-- Integrante 1 -->
+      <div class="col-md-5 mb-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center" style="background-color:#E3F2FD;">
+            <img src="https://undsgn.com/wp-content/uploads/2017/05/team-members-blocks-1024x577.png" 
+                 class="rounded-circle mb-3" width="120" height="120" style="object-fit:cover;" alt="Foto 1">
+            <h5 class="text-primary fw-bold">Laura Gómez</h5>
+            <p class="text-muted mb-1">Marketing Lead</p>
+            <p class="fst-italic text-secondary">"Creatividad con propósito."</p>
+            <div class="mb-2 text-warning">★★★★★</div>
+            <p class="mb-1"><a href="mailto:laura@example.com" class="text-info text-decoration-none">laura@example.com</a></p>
+            <p><a href="https://linkedin.com/in/lauragomez" class="text-secondary text-decoration-none">LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integrante 2 -->
+      <div class="col-md-5 mb-4">
+        <div class="card border-0 shadow-sm h-100">
+          <div class="card-body text-center" style="background-color:#E3F2FD;">
+            <img src="https://www.greengeeks.com/tutorials/wp-content/uploads/2020/10/Team-Member-Profile.jpg" 
+                 class="rounded-circle mb-3" width="120" height="120" style="object-fit:cover;" alt="Foto 2">
+            <h5 class="text-primary fw-bold">Carlos Méndez</h5>
+            <p class="text-muted mb-1">Full Stack Developer</p>
+            <p class="fst-italic text-secondary">"Código limpio, soluciones claras."</p>
+            <div class="mb-2 text-warning">★★★★★</div>
+            <p class="mb-1"><a href="mailto:carlos@example.com" class="text-info text-decoration-none">carlos@example.com</a></p>
+            <p><a href="https://linkedin.com/in/carlosmendez" class="text-secondary text-decoration-none">LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </div>
+  </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="consulta.js"></script>
+  <!-- 🔻 INICIO FOOTER -->
+<footer class="bg-primary text-white text-center py-3 mt-5">
+  <div class="container">
+    <small>@Aerolíneas-Arg — Todos los derechos reservados</small>
+  </div>
+</footer>
+
 </body>
 </html>
